@@ -84,11 +84,15 @@ public abstract class Personaje {
 
         @Override
         public void atacar() {
-
+            System.out.println("El guerreo ataca");
         }
 
         @Override
         public void defender() {
+            System.out.println("El guerrero se defiende");
+        }
+        public void cargarataque(){
+            System.out.println("El guerrero carga el ataque");
         }
     }
 
@@ -105,16 +109,20 @@ public abstract class Personaje {
 
         @Override
         public void atacar() {
-
+            System.out.println("El mago ataca");
         }
 
         @Override
         public void LanzarHechizo() {
+            System.out.println("El mago lanza un hechizo");
         }
 
         @Override
         public void curar() {
-
+            System.out.println("El mago se cura");
+        }
+        public void regenerarmana(){
+            System.out.println("el mago regenera mana");
         }
     }
 
@@ -131,14 +139,19 @@ public abstract class Personaje {
 
         @Override
         public void atacar() {
-
+            System.out.println("El arquero ataca");
         }
 
         @Override
         public void volar() {
-
+            System.out.println("El arquero empieza a volar");
         }
-
+public void disparaflecha(){
+    System.out.println("El arquero dispara una flecha");
+}
+public void reabastecerflecha(){
+    System.out.println("El arquero reabastece sus flechas");
+}
     }
 
     public class Hechizero extends PersonajeMagico implements Magico, Defendible {
@@ -154,17 +167,20 @@ public abstract class Personaje {
 
         @Override
         public void atacar() {
-
+            System.out.println("El hechizero ataca");
         }
 
         @Override
         public void LanzarHechizo() {
-
+            System.out.println("El hechizero lanza un hechizo");
         }
 
         @Override
         public void defender() {
-
+            System.out.println("El hechizero se defiende");
+        }
+        public void invocarentidad(){
+            System.out.println("OKIRO");
         }
 
     }
@@ -182,17 +198,23 @@ public abstract class Personaje {
 
         @Override
         public void atacar() {
-
+            System.out.println("El asesino ataca");
         }
 
         @Override
         public void moverse() {
-
+            System.out.println("El asesino se mueve");
         }
 
         @Override
         public void curar() {
-
+            System.out.println("El asesino se cura");
+        }
+        public void atacarporlaespalda(){
+                System.out.println("El asesino te ataca por la espalda");
+    }
+        public void ocultar(){
+            System.out.println("El asesino se oculta");
         }
 
     }
