@@ -11,6 +11,6 @@ package com.mycompany.delgado_agustin_rodriguez_alejandro_ut6_personajes;
 public class Delgado_Agustin_Rodriguez_Alejandro_UT6_Personajes {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+     
     }
 }
