@@ -20,9 +20,9 @@ public abstract class Personaje {
         this.nivel = nivel;
         this.salud = salud;
     }
-
+    
     public abstract void atacar();
-
+    
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
@@ -33,7 +33,7 @@ public abstract class Personaje {
         Personaje Personaje = (Personaje) obj;
         return this.nombre.equals(Personaje.nombre);
     }
-
+    
     public int hashCode() {
         return super.hashCode();
     }
@@ -68,4 +68,21 @@ public abstract class Personaje {
         }
 
     }
+    
+    public interface Curable {
+        void curar();
+    }
+    public interface Volador {
+        void volar();
+    }
+    public interface Magico {
+        void LanzarHechizo();
+    }
+    public interface Defendible {
+        void defender();
+    }
+    public interface Movilizable {
+        void moverse();
+    }
+    
 }
