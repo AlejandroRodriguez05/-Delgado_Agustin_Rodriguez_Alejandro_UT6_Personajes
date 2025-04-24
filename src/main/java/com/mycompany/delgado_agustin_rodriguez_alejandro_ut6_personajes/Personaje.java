@@ -20,9 +20,9 @@ public abstract class Personaje {
         this.nivel = nivel;
         this.salud = salud;
     }
-    
+
     public abstract void atacar();
-    
+
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
@@ -33,7 +33,7 @@ public abstract class Personaje {
         Personaje Personaje = (Personaje) obj;
         return this.nombre.equals(Personaje.nombre);
     }
-    
+
     public int hashCode() {
         return super.hashCode();
     }
@@ -68,21 +68,158 @@ public abstract class Personaje {
         }
 
     }
-    
+
+    public class Guerrero extends PersonajeFisico implements Defendible {
+
+        int fuerza;
+        int armadura;
+        int escudo;
+
+        public Guerrero(int fuerza, int armadura, int escudo, String nombre, int nivel, int salud) {
+            super(nombre, nivel, salud);
+            this.fuerza = fuerza;
+            this.armadura = armadura;
+            this.escudo = escudo;
+        }
+
+        @Override
+        public void atacar() {
+
+        }
+
+        @Override
+        public void defender() {
+        }
+    }
+
+    public class Mago extends PersonajeMagico implements Magico, Curable {
+
+        int mana;
+        int sabiduria;
+
+        public Mago(int mana, int sabiduria, String nombre, int nivel, int salud) {
+            super(nombre, nivel, salud);
+            this.mana = mana;
+            this.sabiduria = sabiduria;
+        }
+
+        @Override
+        public void atacar() {
+
+        }
+
+        @Override
+        public void LanzarHechizo() {
+        }
+
+        @Override
+        public void curar() {
+
+        }
+    }
+
+    public class Arquero extends PersonajeFisico implements Volador {
+
+        int agilidad;
+        int numerodeflechas;
+
+        public Arquero(int agilidad, int numerodeflechas, String nombre, int nivel, int salud) {
+            super(nombre, nivel, salud);
+            this.agilidad = agilidad;
+            this.numerodeflechas = numerodeflechas;
+        }
+
+        @Override
+        public void atacar() {
+
+        }
+
+        @Override
+        public void volar() {
+
+        }
+
+    }
+
+    public class Hechizero extends PersonajeMagico implements Magico, Defendible {
+
+        int mana;
+        int Concentracion;
+
+        public Hechizero(int mana, int Concentracion, String nombre, int nivel, int salud) {
+            super(nombre, nivel, salud);
+            this.mana = mana;
+            this.Concentracion = Concentracion;
+        }
+
+        @Override
+        public void atacar() {
+
+        }
+
+        @Override
+        public void LanzarHechizo() {
+
+        }
+
+        @Override
+        public void defender() {
+
+        }
+
+    }
+
+    public class Asesino extends PersonajeFisico implements Movilizable, Curable {
+
+        int sigilo;
+        int critico;
+
+        public Asesino(int sigilo, int critico, String nombre, int nivel, int salud) {
+            super(nombre, nivel, salud);
+            this.sigilo = sigilo;
+            this.critico = critico;
+        }
+
+        @Override
+        public void atacar() {
+
+        }
+
+        @Override
+        public void moverse() {
+
+        }
+
+        @Override
+        public void curar() {
+
+        }
+
+    }
+
     public interface Curable {
+
         void curar();
     }
+
     public interface Volador {
+
         void volar();
     }
+
     public interface Magico {
+
         void LanzarHechizo();
     }
+
     public interface Defendible {
+
         void defender();
     }
+
     public interface Movilizable {
+
         void moverse();
     }
-    
+
 }
