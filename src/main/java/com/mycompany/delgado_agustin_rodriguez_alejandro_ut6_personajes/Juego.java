@@ -4,8 +4,6 @@
  */
 package com.mycompany.delgado_agustin_rodriguez_alejandro_ut6_personajes;
 
-import com.mycompany.delgado_agustin_rodriguez_alejandro_ut6_personajes.Personaje;
-import com.mycompany.delgado_agustin_rodriguez_alejandro_ut6_personajes;
 import java.util.ArrayList;
 
 /**
