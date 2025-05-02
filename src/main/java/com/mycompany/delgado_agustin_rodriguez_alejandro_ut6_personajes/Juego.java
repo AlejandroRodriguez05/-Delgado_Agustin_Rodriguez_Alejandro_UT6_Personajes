@@ -4,35 +4,68 @@
  */
 package com.mycompany.delgado_agustin_rodriguez_alejandro_ut6_personajes;
 
-import com.mycompany.delgado_agustin_rodriguez_alejandro_ut6_personajes.Personaje.Defendible;
+import com.mycompany.delgado_agustin_rodriguez_alejandro_ut6_personajes.Personaje;
+import com.mycompany.delgado_agustin_rodriguez_alejandro_ut6_personajes;
 import java.util.ArrayList;
-
-
 
 /**
  *
  * @author AlumnadoTarde
  */
 public class Juego {
-      private ArrayList<Personaje> personajes;
 
-    public Juego(ArrayList<Personaje> personajes) {
-        personajes = new ArrayList<>();
-    }
-    
-    public void AgregarPersonaje(Personaje p){
-        personajes.add(p);
-    }
 
-     public void mostrarAcciones() {
-         for (Personaje p : personajes) {
-             p.atacar();
-             
-              if (p instanceof Defendible) {
-                ((Defendible) p).defender();
+    public void mostrarAcciones(ArrayList<Personaje> personaje) {
+        for (Personaje p : personaje) {
+            p.atacar();
+
+            //Verifica las habilidades con instanceof
+            if (p instanceof Personaje.Curable) {
+                ((Personaje.Curable) p).curar();
             }
-         }
-     }
-    
-    
+
+            if (p instanceof Personaje.Magico) {
+                ((Personaje.Magico) p).LanzarHechizo();
+            }
+
+            if (p instanceof Personaje.Defendible) {
+                ((Personaje.Defendible) p).defender();
+            }
+
+            if (p instanceof Personaje.Volador) {
+                ((Personaje.Volador) p).volar();
+            }
+
+            if (p instanceof Personaje.Movilizable) {
+                ((Personaje.Movilizable) p).moverse();
+            }
+
+            //Ataque de los personajes:
+            
+            if (p instanceof Personaje.Guerrero) {
+                ((Personaje.Guerrero) p).cargarataque();
+            }
+
+            if (p instanceof Personaje.Asesino) {
+                ((Personaje.Asesino) p).atacarporlaespalda();
+                ((Personaje.Asesino) p).ocultar();
+            }
+
+            if (p instanceof Personaje.Arquero) {
+                ((Personaje.Arquero) p).disparaflecha();
+                ((Personaje.Arquero) p).reabastecerflecha();
+            }
+
+            if (p instanceof Personaje.Hechizero) {
+                ((Personaje.Hechizero) p).invocarentidad();
+            }
+
+            if (p instanceof Personaje.Mago) {
+                ((Personaje.Mago) p).regenerarmana();
+            }
+
+            System.out.println();
+        }
+
+    }
 }

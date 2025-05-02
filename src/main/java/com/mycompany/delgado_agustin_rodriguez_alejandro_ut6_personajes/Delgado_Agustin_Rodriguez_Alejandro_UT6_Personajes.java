@@ -15,6 +15,7 @@ import com.mycompany.delgado_agustin_rodriguez_alejandro_ut6_personajes.Personaj
 public class Delgado_Agustin_Rodriguez_Alejandro_UT6_Personajes {
 
     public static void main(String[] args) {
+        Juego Juego = new Juego ();
        ArrayList<Personaje> personajes = new ArrayList<>();
 
         // Crear instancias de personajes concretos
@@ -32,7 +33,7 @@ public class Delgado_Agustin_Rodriguez_Alejandro_UT6_Personajes {
         personajes.add(asesino);
 
         // Llamar al método mostrarAcciones
-        mostrarAcciones(personajes);
+         Juego.mostrarAcciones(personajes);
     }
     }
 
