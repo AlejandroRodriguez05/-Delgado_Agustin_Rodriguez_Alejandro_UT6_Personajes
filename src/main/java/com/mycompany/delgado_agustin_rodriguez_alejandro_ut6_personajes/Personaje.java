@@ -69,7 +69,7 @@ public abstract class Personaje {
 
     }
 
-    public class Guerrero extends PersonajeFisico implements Defendible {
+    public static class Guerrero extends PersonajeFisico implements Defendible {
 
         int fuerza;
         int armadura;
@@ -96,7 +96,7 @@ public abstract class Personaje {
         }
     }
 
-    public class Mago extends PersonajeMagico implements Magico, Curable {
+    public static class Mago extends PersonajeMagico implements Magico, Curable {
 
         int mana;
         int sabiduria;
@@ -126,7 +126,7 @@ public abstract class Personaje {
         }
     }
 
-    public class Arquero extends PersonajeFisico implements Volador {
+    public static class Arquero extends PersonajeFisico implements Volador {
 
         int agilidad;
         int numerodeflechas;
@@ -154,7 +154,7 @@ public void reabastecerflecha(){
 }
     }
 
-    public class Hechizero extends PersonajeMagico implements Magico, Defendible {
+    public static class Hechizero extends PersonajeMagico implements Magico, Defendible {
 
         int mana;
         int Concentracion;
@@ -185,7 +185,7 @@ public void reabastecerflecha(){
 
     }
 
-    public class Asesino extends PersonajeFisico implements Movilizable, Curable {
+    public static class Asesino extends PersonajeFisico implements Movilizable, Curable {
 
         int sigilo;
         int critico;
