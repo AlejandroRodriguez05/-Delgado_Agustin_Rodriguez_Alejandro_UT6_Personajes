@@ -3,11 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.delgado_agustin_rodriguez_alejandro_ut6_personajes;
-
-<<<<<<< HEAD
 import com.mycompany.delgado_agustin_rodriguez_alejandro_ut6_personajes.Personaje;
-=======
->>>>>>> 2fc59bd6fdd438943e3d947366c6d303771845d9
 import java.util.ArrayList;
 
 /**
