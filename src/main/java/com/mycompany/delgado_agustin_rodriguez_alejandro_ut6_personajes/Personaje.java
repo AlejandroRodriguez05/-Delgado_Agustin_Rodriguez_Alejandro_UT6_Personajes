@@ -43,7 +43,7 @@ public abstract class Personaje {
         return "Nombre:" + nombre + " nivel:" + nivel + " salud:" + salud;
     }
 
-    public abstract class PersonajeFisico extends Personaje {
+    public static abstract class PersonajeFisico extends Personaje {
 
         //Constructor
         public PersonajeFisico(String nombre, int nivel, int salud) {
@@ -56,7 +56,7 @@ public abstract class Personaje {
 
     }
 
-    public abstract class PersonajeMagico extends Personaje {
+    public static abstract class PersonajeMagico extends Personaje {
 
         //Constructor
         public PersonajeMagico(String nombre, int nivel, int salud) {
@@ -180,7 +180,7 @@ public void reabastecerflecha(){
             System.out.println("El hechizero se defiende");
         }
         public void invocarentidad(){
-            System.out.println("OKIRO");
+            System.out.println("El hechizero invoco una sombra");
         }
 
     }
